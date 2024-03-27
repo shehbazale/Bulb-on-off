@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      45deg,
+      #3498db,
+      #2ecc71
+    ); /* Gradient background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none; 
+  }
+  /* card section */
+
+  .card {
+    width: 20%;
+    height: 320px;
+    border-radius: 20px;
+    background: #484646;
+    position: relative;
+    padding: 1.8rem;
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+   }
+   
+   .card-details {
+    color: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* gap: .5em; */
+    /* display: grid; */
+    /* place-content: center; */
+
+   }
+   .card-button {
+    transform: translate(-50%, 105%);
+    width: 50%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #1966c4;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 0.5rem;
+    position: absolute;
+    left: 50%;
+    top: -10%;
+    opacity: 0;
+    transition: 0.3s ease-out;
+   }
+   
+   .text-body {
+    color: rgb(134, 134, 134);
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 2.5em;
+    font-weight: bold;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: #1966c4;;
+    box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
+
+   /* Styling the img */
+   #img{
+    width: 120px;
+    height: 200px;
+   }
+
+   /* on off btn */
+   #btnOn{
+    display: none;
+   }
+
+   .btn{
+    font-size: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+   }
+
+
